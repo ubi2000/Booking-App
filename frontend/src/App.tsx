@@ -5,6 +5,7 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
+import Register from "./Pages/Register";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Layout><p>Home Page</p></Layout>} />
         <Route path="/search" element={<Layout><p>Seach Page</p></Layout>} />
         <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/register" element={<Layout><Register/></Layout>}/>
       </Routes>
     </Router>
   );
