@@ -5,6 +5,7 @@ import "dotenv/config";
 import userRoutes from "./routes/users";
 import authRoutes from "./routes/auth";
 import cookieParser from "cookie-parser";
+import path from "path";
 
 //DB connection
 mongoose.connect(process.env.DB_URL as string)
@@ -19,6 +20,8 @@ app.use(
     credentials: true,
   })
 );
+
+app.use(express.static(path.join(__dirname,"../../frontend/dist")))
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);

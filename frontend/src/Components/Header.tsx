@@ -18,8 +18,7 @@ const Header = () => {
               <SignOutButton />
             </>
           ) : (
-            <Link
-              to="/sign-in"
+            <Link to="/signin"
               className="bg-white flex items-center text-blue-600 px-3 font-bold hover:bg-yellow-100"
             >
               Sign In
