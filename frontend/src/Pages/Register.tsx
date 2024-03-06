@@ -13,7 +13,7 @@ export type RegisterFormData = {
 };
 
 const Register = () => {
-  const queryClient=useQueryClient()
+  const queryClient = useQueryClient();
   const navigate = useNavigate();
   const { showToast } = useAppContext();
   const {
@@ -24,9 +24,9 @@ const Register = () => {
   } = useForm<RegisterFormData>();
 
   const mutation = useMutation(apiClient.register, {
-    onSuccess: async() => {
+    onSuccess: async () => {
       showToast({ message: "Registered Successfully!", type: "Success" });
-      await queryClient.invalidateQueries("validateToken")
+      await queryClient.invalidateQueries("validateToken");
       navigate("/");
     },
     onError: (error: Error) => {

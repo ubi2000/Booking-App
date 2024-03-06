@@ -22,7 +22,7 @@ const Header = () => {
               to="/sign-in"
               className="bg-white flex items-center text-blue-600 px-3 font-bold hover:bg-yellow-100"
             >
-              Sign-In
+              Sign In
             </Link>
           )}
         </span>

@@ -7,7 +7,7 @@ import authRoutes from "./routes/auth";
 import cookieParser from "cookie-parser";
 
 //DB connection
-mongoose.connect(process.env.DB_URL as string);
+mongoose.connect(process.env.DB_URL as string)
 
 const app = express();
 app.use(cookieParser())
